@@ -80,7 +80,7 @@ export class Component {
   setState (newState) {
     if (this.state === null || typeof this.state !== 'object') {
       this.state = newState;
-      this.rerender();
+      this.update();
       return;
     }
     let merge = (oldState, newState) => {
